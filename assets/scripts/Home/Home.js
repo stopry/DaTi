@@ -29,7 +29,7 @@ cc.Class({
   },
   //用户点击余额事件
   userClickMoney(){
-    
+
   },
   //显示大推广码弹框
   showBigPrtCode(){

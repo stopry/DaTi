@@ -9,13 +9,16 @@ cc.Class({
   },
   onLoad(){
     this.loginDatas = {
-      account:'',
+      clientId: "098f6bcd4621d373cade4e832627b4f6",
+      extAttr: "",
+      loginChannel: "",
+      userName:'',
       password:''
     };
   },
   //提交登录数据
   subLoginDatas(){
-    let act = this.loginDatas.account = Util.trim(this.account.string);
+    let act = this.loginDatas.userName = Util.trim(this.account.string);
     let pwd = this.loginDatas.password = Util.trim(this.password.string);
     if(!act){
       Util.showTips('请输入用户名');
@@ -27,11 +30,17 @@ cc.Class({
       Util.showTips('请输入登录密码');
       return;
     }
-    this.toHomePage();
-    return;
-    //HomeUtil.toLogIn(this.loginDatas).then((res)=>{
-    //
-    //});
+    HomeUtil.toLogIn(this.loginDatas).then((res)=>{
+      if(!res.success){
+        Util.showTips(res.msg);
+      }else{
+        let obj = res.obj;
+        let token = obj.tokenType+' '+obj.accessToken;
+        cc.sys.localStorage.setItem('token',token);
+        Util.showTips('登录成功');
+        this.toHomePage();
+      }
+    });
   },
   /*去主页面*/
   toHomePage(){

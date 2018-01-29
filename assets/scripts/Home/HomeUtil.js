@@ -2,8 +2,46 @@ let Util = require('Util');
 let Net = require('Net');
 const HomeUtil = (function(){
   var hu = {};
+  //游客登录
+  let visitorLoginUrl = '/login/visitorlogin';
+  hu.visitorToken = function(datas){
+    datas = datas||null;
+    let prs = new Promise((resolve,reject)=>{
+      Net.get(visitorLoginUrl,!1,datas,(res)=>{
+        resolve(res);
+      },(err)=>{
+        reject(false);
+      })
+    });
+    return prs;
+  };
+
+  //用户登录
+  let loginUrl = '/login/userlogin';
+  hu.toLogIn = function(datas){
+    let prs = new Promise((resolve,reject)=>{
+      Net.post(loginUrl,1,datas,(res)=>{
+        resolve(res);
+      },(err)=>{
+        reject(false);
+      })
+    });
+    return prs;
+  };
+  //首页数据
+  let indexUrl = '/question/index';
+  hu.getIndexData = function(){
+    let prs = new Promise((resolve,reject)=>{
+      Net.get(indexUrl,1,null,(res)=>{
+        resolve(res);
+      },(err)=>{
+        reject(false);
+      })
+    });
+    return prs;
+  };
   //获取绑定短信验证码
-  let getMsgCodeUrl = '/get/msg';
+  let getMsgCodeUrl = '/sms/sendQaBindSms';
   hu.getMsgCode = function(datas){
     let prs = new Promise((resolve,reject)=>{
       Net.post(getMsgCodeUrl,!1,datas,(res)=>{
@@ -15,22 +53,10 @@ const HomeUtil = (function(){
     return prs;
   };
   //提交用户绑定数据
-  let bindUrl = '/get/bind';
+  let bindUrl = '/user/bind';
   hu.subBindData = function(datas){
     let prs = new Promise((resolve,reject)=>{
       Net.post(bindUrl,1,datas,(res)=>{
-        resolve(res);
-      },(err)=>{
-        reject(false);
-      })
-    });
-    return prs;
-  };
-  //用户登录
-  let loginUrl = '/get/logIn';
-  hu.toLogIn = function(datas){
-    let prs = new Promise((resolve,reject)=>{
-      Net.post(loginUrl,1,datas,(res)=>{
         resolve(res);
       },(err)=>{
         reject(false);

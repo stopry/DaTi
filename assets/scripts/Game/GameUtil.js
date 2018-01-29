@@ -4,9 +4,8 @@ const GameUtil = (function () {
   //开始答题
   let startUrl = '/question/start';
   gu.startQues = function(datas){
-    cc.log(datas);
     let prs = new Promise((resolve,reject)=>{
-      Net.get(startUrl,!1,datas,(res)=>{
+      Net.get(startUrl,1,datas,(res)=>{
         resolve(res);
       },(err)=>{
         reject(false);

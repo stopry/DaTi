@@ -29,12 +29,12 @@ var Util = (function(util){
     };
     //银行卡正则
     utl.verBankCard = function(backCard){
-      let reg = '/^([1-9]{1})(\d{14}|\d{18})$/';
+      let reg = /^([1-9]{1})(\d{14}|\d{18})$/;
       return reg.test(backCard);
     };
     //验证中文姓名
     utl.verUserName = function(userName){
-      let reg = new RegExp("^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9])*$");
+      let reg = /^([\u4E00-\uFA29]|[\uE7C7-\uE7F3]|[a-zA-Z0-9])*$/;
       return reg.test(userName);
     };
     //身份证号验证

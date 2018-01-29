@@ -26,20 +26,30 @@ cc.Class({
     bankList:{//银行列表
       default:[],
       type:cc.Node
-    }
+    },
+    msgCodeLabel:cc.Label,//获取验证码label
   },
   onLoad(){
     //用户绑定数据
     this.bindDatas = {
-      mobile:'',
-      msgCode:'',
-      password:'',
-      uName:'',
-      bankName:'',
-      bankCard:'',
-      idCard:'',
+      "bankName": "",
+      "cardNo": "",
+      "channel": "",
+      "code": "",
+      "field1": "1",
+      "field2": "2",
+      "field3": "3",
+      "field4": "4",
+      "field5": "5 ",
+      "idCard": "",
+      "imgcode": "",
+      "mobile": "",
+      "name": "",
+      "pwd": "",
+      "superiorId": cc.sys.localStorage.getItem('sid')||'0'
     };
     this.selBank();
+    this.canGetVCode = true;//手否可得到二维码
   },
   //小提示
   showLittleTip(str){//显示提示
@@ -56,7 +66,42 @@ cc.Class({
   },
   //获取短信验证码
   getMsgCode(){
+    if(!this.canGetVCode) return;
+    let mobile =  Util.trim(this.mobile.string);
+    if(!mobile){
+      this.showLittleTip('请输入手机号');
+      return;
+    }else if(!Util.verMobileReg(mobile)){
+      this.showLittleTip('手机号格式有误');
+      return;
+    }
+    let data = {
+      "captchaCode": " ",
+      "captchaValue": " ",
+      "mobile":mobile,
+      "type": " "
+    };
 
+    HomeUtil.getMsgCode(data).then((res)=>{
+      if(!res.success){
+        Util.showTips(res.msg);
+      }else{
+        Util.showTips('验证码发送成功');
+        let timer = 90;
+        this.msgCodeLabel.string = timer+'s';
+        this.canGetVCode = false;
+        let _timeOut = setInterval(()=>{
+          timer--;
+          this.msgCodeLabel.string = timer+'s';
+          if(timer<=0){
+            clearInterval(_timeOut);
+            this.canGetVCode = true;
+            timer = 90;
+            this.msgCodeLabel.string = '重新获取'
+          }
+        },1000);
+      }
+    });
   },
   //打开关闭选择银行框
   openSelBankBox(){
@@ -80,22 +125,22 @@ cc.Class({
   },
   getBindDatas(){//得到用户绑定输入的数据
     this.bindDatas.mobile = Util.trim(this.mobile.string);
-    this.bindDatas.msgCode = Util.trim(this.msgCode.string);
-    this.bindDatas.password = Util.trim(this.password.string);
-    this.bindDatas.uName = Util.trim(this.uName.string);
+    this.bindDatas.code = Util.trim(this.msgCode.string);
+    this.bindDatas.pwd = Util.trim(this.password.string);
+    this.bindDatas.name = Util.trim(this.uName.string);
     this.bindDatas.bankName = Util.trim(this.bankName.string);
-    this.bindDatas.bankCard = Util.trim(this.bankCard.string);
+    this.bindDatas.cardNo = Util.trim(this.bankCard.string);
     this.bindDatas.idCard = Util.trim(this.idCard.string);
   },
   //提交绑定数据
   submitBindDatas(){
     this.getBindDatas();
     let mobile = this.bindDatas.mobile;
-    let msgCode = this.bindDatas.msgCode;
-    let password = this.bindDatas.password;
-    let uName = this.bindDatas.uName;
+    let msgCode = this.bindDatas.code;
+    let password = this.bindDatas.pwd;
+    let uName = this.bindDatas.name;
     let bankName = this.bindDatas.bankName;
-    let bankCard = this.bindDatas.bankCard;
+    let bankCard = this.bindDatas.cardNo;
     let idCard = this.bindDatas.idCard;
 
     if(!mobile){
@@ -134,7 +179,14 @@ cc.Class({
     }
 
     HomeUtil.subBindData(this.bindDatas).then((res)=>{
-      console.log(res);
+      if(!res.success){
+        Util.showTips(res.msg);
+      }else{
+        let obj = res.obj;
+        cc.log(obj);
+        Util.showTips('绑定成功');
+        this.getComponent('Home').renderPage();
+      }
     });
   },
   onDestroy(){

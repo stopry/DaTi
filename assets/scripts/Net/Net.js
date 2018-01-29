@@ -16,9 +16,6 @@ let Net = {
     get:function(url,header,data,succCallBack,errCallBack){//get请求
         var self = this;
         var host = self.api.host;
-        //var host = 'http://101.132.109.119:9080';
-        //var host = 'http://192.168.19.89:8081';//打包web版注释这行
-        //var host = 'http://192.168.19.200:8081';
         var xhr = new XMLHttpRequest();
         Util.showLoading();
         xhr.onreadystatechange = function () {
@@ -56,9 +53,6 @@ let Net = {
     post:function(url,header,data,succCallBack,errCallBack){//post请求
         var self = this;
         var host = self.api.host;
-        //var host = 'http://192.168.19.200:8081';
-        //var host = 'http://101.132.109.119:9080';
-        //var host = 'http://192.168.19.89:8081';
         var xhr = new XMLHttpRequest();
         var self = this;
         Util.showLoading();
@@ -75,14 +69,9 @@ let Net = {
         //url = self.api.api+url;
         let uri = "";
         //打包web版注释这段if语句
-        if(self.api.is89){
-            if(url=='/oauth/token'||url=='/showOverallMarket'||url=='/reg/registerNoImg'||url=='/sms/sendRegSms'||url=='/sms/sendRestLoginSms'||url=='/reg/resetLoginPwdNoImg'){
-                uri = 'http://192.168.19.89:8080'+self.api.market+url
-            }else{
-                uri = self.api.host+self.api.api+url
-            }
-        }else if(url=='/oauth/token'||url=='/showOverallMarket'||url=='/reg/registerNoImg'||url=='/sms/sendRegSms'||url=='/sms/sendRestLoginSms'||url=='/reg/resetLoginPwdNoImg'){
-            uri = self.api.host+self.api.market+url
+        if(url=='/sms/sendQaBindSms'){
+          Util.showTips('aaaa');
+            uri = 'http://192.168.19.89:8080/market'+url;
         }else{
             uri = self.api.host+self.api.api+url
         }
@@ -92,7 +81,6 @@ let Net = {
             xhr.setRequestHeader("Accept-Encoding","gzip,deflate");
         }
         if(header){
-            //xhr.setRequestHeader('Authorization','44');
             xhr.setRequestHeader('Authorization',cc.sys.localStorage.getItem('token'));
         }
         xhr.timeout = this.timeOut;

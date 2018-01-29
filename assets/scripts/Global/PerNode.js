@@ -1,11 +1,11 @@
 cc.Class({
   extends:cc.Component,
   properties:{
-    datas:{
-      default:null,
-      type:cc.Object,
-      tooltip: "常驻节点用于场景切换传参!"
-    },
+    //datas:{
+    //  default:null,
+    //  //type:cc.Object,
+    //  //tooltip: "常驻节点用于场景切换传参!"
+    //},
     /*全局确认框 用来对服务器返回401做处理*/
     //确认框资源start
     conDia:{//确认对话框
@@ -18,7 +18,10 @@ cc.Class({
     },
   },
   onLoad(){
-
+    this.datas = {
+      quesResult:{},
+      userInfo:{}
+    };
   },
   onDestroy(){
 

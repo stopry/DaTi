@@ -116,11 +116,11 @@ cc.Class({
         this.user.isTimeOut = true;
         this.user.canSel = false;
 
-        let uid = this.userId;
+        //let uid = this.userId;
         let title = this.quesCon.string;
         let answer = '';
         let subDatas = {
-          userId:uid,
+          //userId:uid,
           title:title,
           answer:answer
         };
@@ -173,7 +173,16 @@ cc.Class({
         this.virDatas.preScore = obj.point;//上一题得分
         this.virDatas.allScore = obj.totalPoint;//总得分
 
+        //到最后一题 在常驻节点存放答题结果信息
+        if(this.isLastQues){
+          Util.getPerNode('PerNode').getComponent('PerNode').datas.quesResult = {
+            gold:obj.gold,
+            totalPoint:obj.totalPoint
+          };
+        }
+
         this.quesAwsResolve(this.virDatas);
+
       }
     });
 
@@ -259,7 +268,7 @@ cc.Class({
   },
   //开始答题
   startQues(){
-    GameUtil.startQues({userId:this.userId}).then((res)=>{
+    GameUtil.startQues().then((res)=>{
       if(!res.success){
         Util.showTips(res.msg);
       }else{

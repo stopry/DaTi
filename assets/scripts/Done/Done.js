@@ -6,6 +6,7 @@ cc.Class({
     score:cc.Label,//获得积分
     money:cc.Label,//获得奖金
     resultIcon:cc.Sprite,//结果图标
+    iconNode:cc.Node,//奖杯node
     resultPic:[cc.SpriteFrame],//结果图片
   },
   onLoad(){
@@ -21,10 +22,13 @@ cc.Class({
     this.result.status = info.totalPoint>0?1:0;
     this.result.score = info.totalPoint;
     this.result.money = info.gold;
-
     this.score.string = "获得积分："+this.result.score;
     this.money.string = this.result.money+'金币';
     this.resultIcon.spriteFrame = this.resultPic[this.result.status];
+    //挑战成功播放奖杯动画
+    if(this.result.status){
+      this.iconNode.getComponent(cc.Animation).play('quesWin');
+    }
   },
   //返回主页
   backHome(){

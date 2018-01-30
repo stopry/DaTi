@@ -243,6 +243,20 @@ var Util = (function(util){
             }
          }
     };
+    //检验品台
+    utl.checkEquipment = function () {
+      var ua = window.navigator.userAgent.toLowerCase();//微信
+      var u = navigator.userAgent;//手机类型android或ios
+      if (ua.match(/MicroMessenger/i) == 'micromessenger') {//微信
+        return 'WX';
+      } else if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {//安卓手机
+        return 'android';
+      } else if (u.indexOf('iPhone') > -1) {//苹果手机
+        return 'ios';
+      } else {//其他设备
+        return 'other';
+      }
+    },
     //验证平台
     utl.getPlatform = function(){
         if(cc.sys.isNative && cc.sys.platform == cc.sys.IPHONE){

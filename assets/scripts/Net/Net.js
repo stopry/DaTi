@@ -9,6 +9,7 @@ let Net = {
         host:'http://192.168.19.47:8085',//host //答题接口
         api:'/qa',
         //api:'/api',
+        marketHost:'http://192.168.19.89:8080',
         market:'/market'
     },
     timeOut:10000,
@@ -19,10 +20,11 @@ let Net = {
         var xhr = new XMLHttpRequest();
         Util.showLoading();
         xhr.onreadystatechange = function () {
-            //self.authVerify(xhr.responseText);
+            self.authVerify(xhr.responseText);
             if (xhr.readyState == 4&&(xhr.status >= 200 && xhr.status < 400)) {
                 Util.hideLoading();
                 var response = JSON.parse(xhr.responseText);
+                cc.log(response);
                 succCallBack&&succCallBack(response);
             }else{
                // errCallBack&&errCallBack();
@@ -41,10 +43,12 @@ let Net = {
         xhr.timeout = this.timeOut;
         xhr.ontimeout = function (e) {
             Util.hideLoading();
+            Util.showTips('网络超时');
             errCallBack&&errCallBack();
         };
         xhr.onerror  = function () {
             Util.hideLoading();
+            Util.showTips('网络错误');
             errCallBack&&errCallBack();
         };
         xhr.send();
@@ -55,12 +59,15 @@ let Net = {
         var host = self.api.host;
         var xhr = new XMLHttpRequest();
         var self = this;
-        Util.showLoading();
+        if(url!='/question/qa'){
+          Util.showLoading();
+        }
         xhr.onreadystatechange = function () {
-            //self.authVerify(xhr.responseText);
+            self.authVerify(xhr.responseText);
             if (xhr.readyState == 4&&(xhr.status >= 200 && xhr.status < 400)) {
                 Util.hideLoading();
                 var response = JSON.parse(xhr.responseText);
+                cc.log(response);
                 succCallBack&&succCallBack(response);
             }else{
                 //errCallBack&&errCallBack();
@@ -68,10 +75,9 @@ let Net = {
         };
         //url = self.api.api+url;
         let uri = "";
-        //打包web版注释这段if语句
+        //短信验证码接口调用市场的
         if(url=='/sms/sendQaBindSms'){
-          Util.showTips('aaaa');
-            uri = 'http://192.168.19.89:8080/market'+url;
+            uri = self.api.marketHost+self.api.market+url;
         }else{
             uri = self.api.host+self.api.api+url
         }
@@ -86,10 +92,12 @@ let Net = {
         xhr.timeout = this.timeOut;
         xhr.ontimeout  = function (e) {
             Util.hideLoading();
+            Util.showTips('网络超时');
             errCallBack&&errCallBack();
         };
         xhr.onerror  = function () {
             Util.hideLoading();
+            Util.showTips('网络错误');
             errCallBack&&errCallBack();
         };
         xhr.send(JSON.stringify(data));
@@ -97,13 +105,12 @@ let Net = {
     authVerify:function(res){
         if(res){
             if(JSON.parse(res).code=="401"){
-                cc.director.getScene().getChildByName('ReqAni').active = false;
-                cc.director.getScene().getChildByName('PersistNode').getComponent('PersistNode').showConDia(
-                    '身份验证过期请重新登录',
-                    ()=>{
-                        cc.director.loadScene("LogIn")
-                    },()=>{}
-                );
+                Util.hideLoading();
+                Util.showConDia('身份验证过期请重新登录',
+                  ()=>{
+                    cc.director.loadScene("Guide");
+                    cc.sys.localStorage.removeItem('token');
+                  },()=>{});
             }
         }
     },

@@ -185,6 +185,7 @@ cc.Class({
         let obj = res.obj;
         cc.log(obj);
         Util.showTips('绑定成功');
+        this.closeBindBox();
         this.getComponent('Home').renderPage();
       }
     });

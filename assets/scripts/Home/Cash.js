@@ -49,9 +49,17 @@ cc.Class({
       Util.showTips('提现金额不能大于总金额');
       return;
     }
-    //跳转至市场
-    let token = encodeURI(cc.sys.localStorage.getItem('token'));
-    cc.sys.openURL('www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token);
+    //调用接口获取市场token
+    HomeUtil.getMarketToken().then((res)=>{
+      if(!res.success){
+        Util.showTips(res.msg);
+      }else{
+        let token = res.obj.tokenType+' '+res.obj.accessToken;
+        token = encodeURI(token);
+        //带参数跳转到市场提现页面
+        cc.sys.openURL('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);
+      }
+    });
   },
   onDestroy(){
 

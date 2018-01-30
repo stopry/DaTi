@@ -780,7 +780,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "804155d7-cd8c-4991-963e-4f905e94208e"
+      "__uuid__": "d5c56614-d6c4-4bc6-9412-e0b704f39de9"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -830,7 +830,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 72,
+      "width": 500,
       "height": 30
     },
     "_rotationX": 0,
@@ -865,11 +865,11 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "马飞飞",
+    "_N$string": "",
     "_N$horizontalAlign": 1,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 0
+    "_N$overflow": 2
   },
   {
     "__type__": "cc.Node",
@@ -1473,7 +1473,7 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "804155d7-cd8c-4991-963e-4f905e94208e"
+      "__uuid__": "d5c56614-d6c4-4bc6-9412-e0b704f39de9"
     },
     "_type": 0,
     "_sizeMode": 0,
@@ -2156,7 +2156,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 80,
-      "height": 30
+      "height": 70
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -2190,11 +2190,11 @@
     "_N$file": null,
     "_isSystemFontUsed": true,
     "_spacingX": 0,
-    "_N$string": "马飞飞",
+    "_N$string": "",
     "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
-    "_N$overflow": 3
+    "_N$overflow": 2
   },
   {
     "__type__": "cc.Sprite",

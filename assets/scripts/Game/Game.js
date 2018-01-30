@@ -71,6 +71,7 @@ cc.Class({
     };
     this.createDatas();
     this.preCountDown();
+    this.pUserName.string = this.userName.string = Util.getPerNode('PerNode').getComponent('PerNode').datas.userInfo.userName;
   },
   createDatas(){
     this.virDatas = {
@@ -302,7 +303,7 @@ cc.Class({
   },
   //返回主页
   backHome(){
-    Util.showConDia('您正在答题,退出将会失去本地答题机会,确定退出吗?',()=>{
+    Util.showConDia('您正在答题,退出将会失去本次答题机会,确定退出吗?',()=>{
       cc.director.loadScene('Home');
     },()=>{});
   },

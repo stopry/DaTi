@@ -64,11 +64,12 @@ const HomeUtil = (function(){
     });
     return prs;
   };
-  //用户提现接口
-  let cashUrl = '/user/cash';
-  hu.toCash = function(datas){
+
+  //获取市场的token
+  let getTokenUrl = '/user/getMarketToken';
+  hu.getMarketToken = function(){
     let prs = new Promise((resolve,reject)=>{
-      Net.post(cashUrl,1,datas,(res)=>{
+      Net.get(getTokenUrl,1,null,(res)=>{
         resolve(res);
       },(err)=>{
         reject(false);
@@ -76,6 +77,31 @@ const HomeUtil = (function(){
     });
     return prs;
   };
+  //检查任务
+  let testTaskUrl = '/user/testtask';
+  hu.testTask = function(){
+    let prs = new Promise((resolve,reject)=>{
+      Net.get(testTaskUrl,1,null,(res)=>{
+        resolve(res);
+      },(err)=>{
+        reject(false);
+      })
+    });
+    return prs;
+  };
+
+  //用户提现接口
+  //let cashUrl = '/user/cash';
+  //hu.toCash = function(datas){
+  //  let prs = new Promise((resolve,reject)=>{
+  //    Net.post(cashUrl,1,datas,(res)=>{
+  //      resolve(res);
+  //    },(err)=>{
+  //      reject(false);
+  //    })
+  //  });
+  //  return prs;
+  //};
 
   return hu;
 })();

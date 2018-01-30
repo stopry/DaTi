@@ -23,6 +23,7 @@ cc.Class({
     /*任务框e*/
   },
   onLoad(){
+    cc.log(Global.wxShare);
     cc._initDebugSetting(cc.DebugMode.INFO);
     cc.director.setDisplayStats(false);
     cc.view.resizeWithBrowserSize(true);
@@ -39,6 +40,11 @@ cc.Class({
   //去答题页
   toGamePage(){
     Util.showLoading();
+    if(parseInt(this.chanceNum.string)<=0){
+      Util.showTips('您的答题次数已用完,请点击下方的获取更多获取答题机会');
+      Util.hideLoading();
+      return;
+    }
     cc.director.loadScene('Game');
   },
   //返回引导页
@@ -49,9 +55,8 @@ cc.Class({
   },
   //初始化界面
   renderPage(){
-
     HomeUtil.getIndexData().then((res)=>{
-      cc.log(res);
+      //cc.log(res);
       if(!res.success){
         Util.showTips(res.msg);
       }else{
@@ -65,6 +70,11 @@ cc.Class({
         this.smallChanceNum.string = obj.qaCnt;
         this.accountMoney.string = "¥"+obj.gold;
         this.userName.string = obj.userName;
+        Util.getPerNode('PerNode').getComponent('PerNode').datas.userInfo = obj;
+
+        this.promoteLink = 'http://www.qq.com';
+        Global.link = this.promoteLink;//改变分享配置的link
+
         //如果绑定了生成小的推广码
         if(this.isBind){
           this.createSmallQCode();
@@ -190,12 +200,20 @@ cc.Class({
   toGameGuide(){
     if(!this.isNewTask){
       if(!this.isBind){
-        Util.showTips('完成绑定后才可进行游戏新手引导');
+        Util.showTips('绑定银行卡完善身份信息后才可进行游戏新手引导');
         return;
       }
-      let token = cc.sys.localStorage.getItem('token');
-      token = encodeURI(token);
-      cc.sys.openURL('http://www.zjiayuan.com?formDati=1&token='+token);
+      //调用接口获取市场token
+      HomeUtil.getMarketToken().then((res)=>{
+        if(!res.success){
+          Util.showTips(res.msg);
+        }else{
+          let token = res.obj.tokenType+' '+res.obj.accessToken;
+          token = encodeURI(token);
+          //带参数跳转到游戏
+          cc.sys.openURL('http://www.zjiayuan.com?fromDati=1&token='+token);
+        }
+      });
     }else{
       Util.showTips('您已经完成过游戏新手引导');
     }

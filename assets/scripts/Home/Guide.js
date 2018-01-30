@@ -9,6 +9,8 @@ cc.Class({
     //添加常驻节点用户不同场景传参
     cc.game.addPersistRootNode(this.persistNode);
     this.setSid();
+    //无限机会
+    cc.sys.localStorage.removeItem('token');
   },
   //存sid
   setSid(){

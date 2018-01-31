@@ -9,10 +9,12 @@ var Util = (function(util){
     //播放加载动画
     utl.showLoading = function(){
       this.getPerNode('PerNode').getChildByName('ReqAni').active = true;
+      this.getPerNode('PerNode').getChildByName('ReqAni').getChildByName('Ani').getComponent(cc.Animation).play();
     };
     //关闭加载动画
     utl.hideLoading = function(){
       this.getPerNode('PerNode').getChildByName('ReqAni').active = false;
+      this.getPerNode('PerNode').getChildByName('ReqAni').getChildByName('Ani').getComponent(cc.Animation).stop();
     };
     //显示小提示
     utl.showTips = function(str){

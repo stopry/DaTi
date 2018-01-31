@@ -7,6 +7,7 @@ cc.Class({
     cashNum:cc.EditBox,//提现金额输入框
   },
   onLoad(){
+    Util.hideLoading();
     this.cashDatas = {
       amt:'',
     };
@@ -24,7 +25,18 @@ cc.Class({
   },
   //点击全部提现给输入框赋值
   allCash(){
-    this.cashNum.string = this.canUseMonet.string;
+    let cahsNum = this.canUseMonet.string;
+    //调用接口获取市场token
+    HomeUtil.getMarketToken().then((res)=>{
+      if(!res.success){
+        Util.showTips(res.msg);
+      }else{
+        let token = res.obj.tokenType+' '+res.obj.accessToken;
+        token = encodeURI(token);
+        //带参数跳转到市场提现页面
+        cc.sys.openURL('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);
+      }
+    });
   },
   //返回主页
   backHome(){

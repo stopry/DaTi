@@ -13,7 +13,18 @@
   ],
   "design-resolution-height": 960,
   "design-resolution-width": 640,
-  "excluded-modules": [],
+  "excluded-modules": [
+    "ParticleSystem",
+    "TiledMap",
+    "Spine Skeleton",
+    "VideoPlayer",
+    "WebView",
+    "MotionStreak",
+    "Collider",
+    "DragonBones",
+    "Physics",
+    "Camera"
+  ],
   "fit-height": false,
   "fit-width": true,
   "group-list": [

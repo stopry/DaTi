@@ -8,6 +8,7 @@ cc.Class({
     password:cc.EditBox,//登录密码
   },
   onLoad(){
+    Util.hideLoading();
     this.loginDatas = {
       clientId: "098f6bcd4621d373cade4e832627b4f6",
       extAttr: "",
@@ -44,6 +45,7 @@ cc.Class({
   },
   /*去主页面*/
   toHomePage(){
+    Util.showLoading();
     cc.director.loadScene('Home',()=>{
 
     });

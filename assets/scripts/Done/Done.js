@@ -10,6 +10,7 @@ cc.Class({
     resultPic:[cc.SpriteFrame],//结果图片
   },
   onLoad(){
+    Util.hideLoading();
     this.result = {
       status:0,// 挑战结果 0 1 失败 成功
       score:0,//获得积分

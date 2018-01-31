@@ -10,7 +10,7 @@ cc.Class({
     cc.game.addPersistRootNode(this.persistNode);
     this.setSid();
     //无限机会
-    cc.sys.localStorage.removeItem('token');
+    //cc.sys.localStorage.removeItem('token');
   },
   //存sid
   setSid(){
@@ -38,6 +38,7 @@ cc.Class({
     //return;
     //检测本地是否储存有用户token 如果没有调用游客登录接口 有则使用本地token请求用户信息
     if(cc.sys.localStorage.getItem('token')){
+      Util.showLoading();
       cc.director.loadScene('Home',()=>{
 
       });
@@ -49,6 +50,7 @@ cc.Class({
           let obj = res.obj;
           let token = obj.tokenType+' '+obj.accessToken;
           cc.sys.localStorage.setItem('token',token);
+          Util.showLoading();
           cc.director.loadScene('Home',()=>{
 
           });
@@ -59,10 +61,11 @@ cc.Class({
   },
   //获取用户信息 并储存在常驻节点的datas属性上
   loadPlayer(){
-
+    
   },
   //去登录页面
   toLoginPage(){
+    Util.showLoading();
     cc.director.loadScene('LogIn',()=>{
 
     });

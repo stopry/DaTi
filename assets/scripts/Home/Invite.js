@@ -7,14 +7,15 @@ cc.Class({
     tipsNode:cc.Node,//提示node
   },
   onLoad(){
+    Util.hideLoading();
     this.initPage();
   },
   //邀请好友-提示点击右上角
   inviteFriends(){
-    if(Util.checkEquipment=='WX'){
+    if(Util.checkEquipment()=='WX'){
       this.showShareTip();
     }else{
-      Util.showTips('请在微信中打开进行分享,或在首页中点击二维码截屏后发送给好友');
+      Util.showTips('请在微信中邀请好友,或在首页中点击二维码截屏后发送给好友');
     }
   },
   hideShareTip(){

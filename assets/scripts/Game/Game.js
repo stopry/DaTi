@@ -220,6 +220,7 @@ cc.Class({
     clearInterval(this.inter_val);
     if(this.isLastQues){//如果是最后一题 - 跳转到结算页面
       setTimeout(()=>{
+        Util.showLoading();
         cc.director.loadScene('Done');
       },2000);
       return

@@ -3,13 +3,11 @@
 let Net = {
     api:{
         is89:!1,//是否是89服务
-        //host:'http://api.o2plan.cn',//host
-        //host:'http://api.zjiayuan.com',//host
-        //host:'',//host
-        host:'http://192.168.19.47:8085',//host //答题接口
+        //host:'http://192.168.19.89:8085',//host //答题接口
+        host:'',//host //答题接口
         api:'/qa',
-        //api:'/api',
-        marketHost:'http://192.168.19.89:8080',
+        //marketHost:'http://192.168.19.89:8080',
+        marketHost:'',
         market:'/market'
     },
     timeOut:10000,

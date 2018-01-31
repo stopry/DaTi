@@ -23,11 +23,12 @@ cc.Class({
     /*任务框e*/
   },
   onLoad(){
-    cc.log(Global.wxShare);
-    cc._initDebugSetting(cc.DebugMode.INFO);
+    Util.hideLoading();
+    //cc.log(Global.wxShare);
+    //cc._initDebugSetting(cc.DebugMode.INFO);
     cc.director.setDisplayStats(false);
     cc.view.resizeWithBrowserSize(true);
-    this.promoteLink = 'http://www.qq.com';
+    this.promoteLink = !cc.sys.isNative?window.location.origin:'http://www.zjiayuan.com';
     this.isLoged = false;//用户是否登录
     this.isBind = false;//是否是绑定用户
     this.isNewTask = false;//是否完成了新手引导
@@ -55,6 +56,7 @@ cc.Class({
   },
   //初始化界面
   renderPage(){
+    console.log();
     HomeUtil.getIndexData().then((res)=>{
       //cc.log(res);
       if(!res.success){
@@ -72,8 +74,9 @@ cc.Class({
         this.userName.string = obj.userName;
         Util.getPerNode('PerNode').getComponent('PerNode').datas.userInfo = obj;
 
-        this.promoteLink = 'http://www.qq.com';
-        Global.link = this.promoteLink;//改变分享配置的link
+        this.promoteLink = !cc.sys.isNative?window.location.origin+"?sid="+obj.playerId:'http://www.zjiayuan.com';
+        //改变分享配置的link
+        Global.wxShare.link = this.promoteLink;
 
         //如果绑定了生成小的推广码
         if(this.isBind){
@@ -171,6 +174,7 @@ cc.Class({
 
     //如果已经完成了任务-跳转至提现页
     if(this.isBind&&this.isNewTask){
+      Util.showLoading();
       cc.director.loadScene('Cash',()=>{
 
       });
@@ -236,6 +240,7 @@ cc.Class({
   },
   //去邀请好友界面
   toInvitePage(){
+    Util.showLoading();
     cc.director.loadScene('Invite',()=>{
 
     });

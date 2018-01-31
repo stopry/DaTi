@@ -17,22 +17,22 @@ cc.Class({
         this.root = cc.find('Canvas');
     },
     setContent:function(str){//设置提示内容
-        var _little = cc.instantiate(this.tipPrefab);
-        var actionMoves = cc.moveBy(0, 0, -80);
-        var actionMoved = cc.moveBy(0.2, 0, 80);
+        if(!Global.tips||!Global.tips.name){
+          Global.tips = cc.instantiate(this.tipPrefab);
+        }
+        Global.tips.setSiblingIndex(-1);
+        Global.tips.stopAllActions();
+        let finished = cc.callFunc(()=>{Global.tips.active = false}, this);
         var actionShow = cc.fadeTo(0.2,255);
         var actionHold = cc.fadeTo(1.5,255);
-        var actionHide = cc.fadeTo(1.5,0);
-        var seq = cc.sequence(actionMoves,actionMoved,actionShow,actionHold,actionHide);
-        _little.getChildByName('littleTip').getComponent(cc.Label).string = str;
-        _little.parent = this.root = cc.find('Canvas');
-        _little.runAction(seq);
-        _little.on(cc.Node.EventType.TOUCH_END,()=>{
-            if(_little){
-                _little.stopAllActions();
-                _little.destroy();
-            }
-            //_little.active = false;
+        var actionHide = cc.fadeTo(3,0);
+        var seq = cc.sequence(actionShow,actionHold,actionHide,finished);
+        Global.tips.getChildByName('littleTip').getComponent(cc.Label).string = str;
+        Global.tips.parent = this.root = cc.find('Canvas');
+        Global.tips.active = true;
+        Global.tips.runAction(seq);
+        Global.tips.on(cc.Node.EventType.TOUCH_END,()=>{
+          Global.tips.active = false;
         },this);
     }
     // called every frame, uncomment this function to activate update callback

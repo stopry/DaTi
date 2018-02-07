@@ -1,0 +1,747 @@
+window._CCSettings = {
+    platform: "web-mobile",
+    groupList: [
+        "default"
+    ],
+    collisionMatrix: [
+        [
+            true
+        ]
+    ],
+    rawAssets: {
+        assets: {
+            "beck3hT1VG/qs8bRyLyVm6": [
+                "res/textures/Down/bg_pic.png",
+                0
+            ],
+            "27y/SDlwlEArNPEYK9nnZX": [
+                "res/textures/Down/btn_bai.png",
+                0
+            ],
+            "90NCOe8IFBwKEqord2EdUV": [
+                "res/textures/Down/btn_huang.png",
+                0
+            ],
+            "daTdJwoq9J/aTTidhcRoef": [
+                "res/textures/Down/lose.png",
+                0
+            ],
+            "19e6Rduy5EOaR1HrY13Pn3": [
+                "res/textures/Down/win.png",
+                0
+            ],
+            "39yFKF0xtCK7X0Kwmvn5Uv": [
+                "res/textures/Game/count_down.png",
+                0
+            ],
+            "ea7Swh3dtKZYrJAVTqrksI": [
+                "res/textures/Game/error_option.png",
+                0
+            ],
+            "89cV/A2I9Osa8tchjRg8xn": [
+                "res/textures/Game/f_icon.png",
+                0
+            ],
+            "80s7/fAZVKoZOdtIHO79yz": [
+                "res/textures/Game/normal_option.png",
+                0
+            ],
+            "17rPQHJLxFzIPpNFYm6Ry3": [
+                "res/textures/Game/points.png",
+                0
+            ],
+            "c0JRtPBqZHsK2WWgjDD9DY": [
+                "res/textures/Game/prg_bar_bar.png",
+                0
+            ],
+            "95f3Jkg1FKH78OimKvhJya": [
+                "res/textures/Game/prg_bar_bg.png",
+                0
+            ],
+            "20Re3LCWNCLIIx1Oh6nNXu": [
+                "res/textures/Game/rotate_bg.png",
+                0
+            ],
+            "9awQmQ7ktEvqGy1rC/wACc": [
+                "res/textures/Game/t_icon.png",
+                0
+            ],
+            "bcE/AVIldFE4xackkN43sm": [
+                "res/textures/Game/time_bar_bar.png",
+                0
+            ],
+            "caagIxGMFMYKqeQMAtS1/K": [
+                "res/textures/Game/time_bar_bg.png",
+                0
+            ],
+            "b7kFi1mQxPCr20e0cjOqeK": [
+                "res/textures/Game/top_text_bg.png",
+                0
+            ],
+            "7b5/XRK+pJh5axrIAX/wkj": [
+                "res/textures/Game/tree_icon1.png",
+                0
+            ],
+            "41zqkeROBE/bfsJj5zcvP7": [
+                "res/textures/Game/tree_icon2.png",
+                0
+            ],
+            "58olpezG5DKKOp3fa3UjDz": [
+                "res/textures/Game/tree_icon3.png",
+                0
+            ],
+            "1aJgJYlLhIOJX+z9p2ER+e": [
+                "res/textures/Game/true_option.png",
+                0
+            ],
+            "ef99jwIKJMUI8ti80wCJ2x": [
+                "res/textures/Home/back_black_icon.png",
+                0
+            ],
+            "cc0/HGsT9HP4/Z2NR829TR": [
+                "res/textures/Home/bank_type_logo_1.png",
+                0
+            ],
+            "dboLH895tKWraLex4uAtaU": [
+                "res/textures/Home/bank_type_logo_10.png",
+                0
+            ],
+            "64keUZPEFFJaP4RoIOmMhd": [
+                "res/textures/Home/bank_type_logo_11.png",
+                0
+            ],
+            "49l1lkhPlFhrdkm98twxT9": [
+                "res/textures/Home/bank_type_logo_12.png",
+                0
+            ],
+            "59io5ElxpI5Zm+CqO0+jI6": [
+                "res/textures/Home/bank_type_logo_13.png",
+                0
+            ],
+            "2a8f92oqdEwpJAOl9lyALO": [
+                "res/textures/Home/bank_type_logo_14.png",
+                0
+            ],
+            "6a4R3PTCBKTrZAvYbW+l3G": [
+                "res/textures/Home/bank_type_logo_15.png",
+                0
+            ],
+            "fdsNn9oH9DxpDMl3X/8MFo": [
+                "res/textures/Home/bank_type_logo_2.png",
+                0
+            ],
+            "80Nq5zV9RFlL0ujChZPSMk": [
+                "res/textures/Home/bank_type_logo_3.png",
+                0
+            ],
+            "f4/3XCxyBLi5f5M2BJNhFf": [
+                "res/textures/Home/bank_type_logo_4.png",
+                0
+            ],
+            "2a42a9iWdK4LGHR9BcZxuW": [
+                "res/textures/Home/bank_type_logo_5.png",
+                0
+            ],
+            "bbyA8XhKJJzbKto6YFZA/2": [
+                "res/textures/Home/bank_type_logo_6.png",
+                0
+            ],
+            "12QZzBk0FDQY9iDvQe0lLp": [
+                "res/textures/Home/bank_type_logo_7.png",
+                0
+            ],
+            "61hRA3FuNGSbuxEYoqfvd/": [
+                "res/textures/Home/bank_type_logo_8.png",
+                0
+            ],
+            "99rII2XwdFCq9Cu7WUaxSR": [
+                "res/textures/Home/bank_type_logo_9.png",
+                0
+            ],
+            "bajfQcwkpI96iYM9nKJ0PR": [
+                "res/textures/Home/big_close_icon.png",
+                0
+            ],
+            "e0nArCyB9DAK72Vq64e19F": [
+                "res/textures/Home/bind_btn.png",
+                0
+            ],
+            "1fkkiMZkpLO6nshENpW/SZ": [
+                "res/textures/Home/btn_bg.png",
+                0
+            ],
+            "f9Hvj1OPdEa6JSpcHDsNHM": [
+                "res/textures/Home/cash_bg.png",
+                0
+            ],
+            "34j2TWkOdDKJZOfqx9zvvF": [
+                "res/textures/Home/cash_btn.png",
+                0
+            ],
+            "9bid+R7GlFpbM+7OHhOD4e": [
+                "res/textures/Home/chance_icon.png",
+                0
+            ],
+            "c761mJ42FPuZWSz9i0m+l4": [
+                "res/textures/Home/chance_text.png",
+                0
+            ],
+            "82gq/7dC1M76U1ynRt8of8": [
+                "res/textures/Home/dash_icon.png",
+                0
+            ],
+            "9eOtpVcnBK3o3rJ/X9qxhg": [
+                "res/textures/Home/get_more.png",
+                0
+            ],
+            "90/FSbZ1VM5Y8EJ4sM++cs": [
+                "res/textures/Home/goto_btn.png",
+                0
+            ],
+            "62EGX8YxdCSJ+OdUyII+Tw": [
+                "res/textures/Home/heart_icon.png",
+                0
+            ],
+            "891yZKCJRKHboiiwbR8cSo": [
+                "res/textures/Home/input_bg.png",
+                0
+            ],
+            "de5Q0/IN5CSqYpxg4sTFsZ": [
+                "res/textures/Home/input_bg_l.png",
+                0
+            ],
+            "16vDLszIZJFZSSpKuUtb+c": [
+                "res/textures/Home/input_bg_r.png",
+                0
+            ],
+            "dcq4Zk0PFBrIEkQc1hori1": [
+                "res/textures/Home/label_font.png",
+                0
+            ],
+            "e5A50Yi2lC8a9moJkPjJEb": [
+                "res/textures/Home/light.png",
+                0
+            ],
+            "5ceI5li3ZDgI0NUG03uYeW": [
+                "res/textures/Home/line_bg.png",
+                0
+            ],
+            "6ebmn5kKxLkqWNP8l5UqZC": [
+                "res/textures/Home/login_act_bg.png",
+                0
+            ],
+            "35sUnFRAJDm69T3tsMbFeC": [
+                "res/textures/Home/login_back.png",
+                0
+            ],
+            "4fGS4rmkRC57NnooloKT/1": [
+                "res/textures/Home/login_btn_bg.png",
+                0
+            ],
+            "b23efg6zVEIJi5ad+MPvL/": [
+                "res/textures/Home/login_pwd_bg.png",
+                0
+            ],
+            "d7CPXHa9RA2K+AfMboJuoL": [
+                "res/textures/Home/logined.png",
+                0
+            ],
+            "a4x4XXiMhKTYRYzVP6QvD2": [
+                "res/textures/Home/money_icon.png",
+                0
+            ],
+            "776VVuwzlCH4o5Ty+3X23d": [
+                "res/textures/Home/ques_card.png",
+                0
+            ],
+            "63udAmHOxLLLcZWSGBzABP": [
+                "res/textures/Home/radiu_w_bg.png",
+                0
+            ],
+            "c1kbHCQOpHXLWD1spzLPsl": [
+                "res/textures/Home/rw_ys_font.png",
+                0
+            ],
+            "89Kr9DaHVHSYTCc9Thif+u": [
+                "res/textures/Home/sel_bank_icon.png",
+                0
+            ],
+            "7eZNqrzy5LI4UmDhyvYMIL": [
+                "res/textures/Home/share_tips.png",
+                0
+            ],
+            "f4a9F9r6xOMoKChlItA1AF": [
+                "res/textures/Home/slogen.png",
+                0
+            ],
+            "59VpIqMcJACbeRhV2BZuA8": [
+                "res/textures/Home/sloid_icon.png",
+                0
+            ],
+            "0bTgb/drFExboOzCT9RfWk": [
+                "res/textures/Home/star_bg.png",
+                0
+            ],
+            "aen0XeKABL/Ii6nEgQjLNo": [
+                "res/textures/Home/tri_icon1.png",
+                0
+            ],
+            "dcA5JjMy1OzLgkPws+NoqX": [
+                "res/textures/Home/tri_icon2.png",
+                0
+            ],
+            "a7P+eQ3WdIabzl23gs+8bl": [
+                "res/textures/Home/tri_icon3.png",
+                0
+            ],
+            "a0wVBzcpBGUZNB26rvmrUG": [
+                "res/textures/Home/wenlu.png",
+                0
+            ],
+            "53pbfrwQRNioBU2Y+fxqFy": [
+                "res/textures/Home/yq_haoyou.png",
+                0
+            ],
+            "8166cwKEtL+aWbH61h8btb": [
+                "res/textures/Home/zs_icon_1.png",
+                0
+            ],
+            "2aNZDdM95JDbuX15q4ewo7": [
+                "res/textures/Home/zs_icon_2.png",
+                0
+            ],
+            "eeDFpYXNBHwLLaBKh3a+/5": [
+                "res/textures/Home/zs_icon_3.png",
+                0
+            ],
+            "deWYyaoUNIQ6u96cuSpZB3": [
+                "res/textures/Home/zs_icon_4.png",
+                0
+            ],
+            "51mtTQBVpLnpySR/+/HlRy": [
+                "res/textures/global/alert_layer.png",
+                0
+            ],
+            "73Re2npURMVaylaYXKYyqo": [
+                "res/textures/global/ani/load_ani (1).png",
+                0
+            ],
+            "f00UFFby9Ny50vrrb37mEd": [
+                "res/textures/global/ani/load_ani (10).png",
+                0
+            ],
+            "3btEdPyoJELq4CR4Zkgau/": [
+                "res/textures/global/ani/load_ani (11).png",
+                0
+            ],
+            "8fOww7kUtNZLdgArajDoug": [
+                "res/textures/global/ani/load_ani (12).png",
+                0
+            ],
+            "83wGAcJC1ENbVnkmeTy+NM": [
+                "res/textures/global/ani/load_ani (13).png",
+                0
+            ],
+            bdHwvKqPtKILTjJORIEXKb: [
+                "res/textures/global/ani/load_ani (14).png",
+                0
+            ],
+            "0aLQoWzQdEoKYLviP8EyIN": [
+                "res/textures/global/ani/load_ani (15).png",
+                0
+            ],
+            "80bSLt39FPg6OffJid2vRX": [
+                "res/textures/global/ani/load_ani (16).png",
+                0
+            ],
+            "6e+AyiQBdJCpLl7MbaCUSz": [
+                "res/textures/global/ani/load_ani (17).png",
+                0
+            ],
+            "5fxtC9lFBEHqTQYmuuDF5q": [
+                "res/textures/global/ani/load_ani (2).png",
+                0
+            ],
+            "a5r03zJbJElL0C9P5c9ssK": [
+                "res/textures/global/ani/load_ani (3).png",
+                0
+            ],
+            "0eV5tSbyJEt6KjjFemkZNE": [
+                "res/textures/global/ani/load_ani (4).png",
+                0
+            ],
+            "b2HjotunxIB4MsYixOzsSc": [
+                "res/textures/global/ani/load_ani (5).png",
+                0
+            ],
+            "6dlA+IUPJCgJoyvWuSf3Gw": [
+                "res/textures/global/ani/load_ani (6).png",
+                0
+            ],
+            "026HsBW3VBR5Z0o3LXpgb8": [
+                "res/textures/global/ani/load_ani (7).png",
+                0
+            ],
+            "97/2WpHU9HJpyUmWQZucIA": [
+                "res/textures/global/ani/load_ani (8).png",
+                0
+            ],
+            "2bAuItbUJIirDQTCsJH+Lv": [
+                "res/textures/global/back_icon.png",
+                0
+            ],
+            "acplghpxhK0ajfkXYHTAJs": [
+                "res/textures/global/game_bg.jpg",
+                0
+            ],
+            "b3ZtjRi1pLfbXV9WN4foQk": [
+                "res/textures/global/logo.png",
+                0
+            ]
+        },
+        internal: {
+            "71VhFCTINJM6/Ky3oX9nBT": [
+                "image/default_btn_disabled.png",
+                0
+            ],
+            "e8Ueib+qJEhL6mXAHdnwbi": [
+                "image/default_btn_normal.png",
+                0
+            ],
+            "b4P/PCArtIdIH38t6mlw8Y": [
+                "image/default_btn_pressed.png",
+                0
+            ],
+            "02delMVqdBD70a/HSD99FK": [
+                "image/default_sprite_splash.png",
+                0
+            ]
+        }
+    },
+    assetTypes: [
+        "cc.Texture2D"
+    ],
+    jsList: [
+        "assets/scripts/plugin/qcode.6e3a3.js"
+    ],
+    launchScene: "db://assets/scenes/Guide.fire",
+    scenes: [
+        {
+            url: "db://assets/scenes/Guide.fire",
+            uuid: 15
+        },
+        {
+            url: "db://assets/scenes/Done.fire",
+            uuid: 5
+        },
+        {
+            url: "db://assets/scenes/Game.fire",
+            uuid: 11
+        },
+        {
+            url: "db://assets/scenes/Cash.fire",
+            uuid: 1
+        },
+        {
+            url: "db://assets/scenes/Home.fire",
+            uuid: 8
+        },
+        {
+            url: "db://assets/scenes/Invite.fire",
+            uuid: 0
+        },
+        {
+            url: "db://assets/scenes/LogIn.fire",
+            uuid: 4
+        }
+    ],
+    packedAssets: {
+        "0135684e3": [
+            "54sRVcr9dK2YW0kadg6Vi6",
+            6,
+            "66MnK3GfZGZbTsb2eupAJN",
+            0,
+            3,
+            "b9MHdM48RCjZgMavhXfuFJ",
+            "c00uWI5VpHtKf/7r92YCCY",
+            "d1n7I0miBD+79wuGfaK03b"
+        ],
+        "043307de": [
+            "04ziiA411FMLNMwMbpH6GZ",
+            2,
+            1,
+            "8f4ccz8hFJGas+OrMVqw54",
+            "9ea5hE8bFG9pPe9D3rb/gL",
+            7,
+            9
+        ],
+        "07c99df0": [
+            13,
+            "06VUPHnf1HTIusv6ddyp1I",
+            2,
+            "37Lc22TblFm74Z3X9lrlPj",
+            "97P86bZphHJ6tZ4rSo10Pr",
+            3,
+            4,
+            "d2HTYR3chGAoRD29MBErV1",
+            17,
+            "f0HH+VQgpExJHrUlTfxhKc"
+        ],
+        "0ad6357a3": [
+            "1aTNw/mDZJCI5CPZuJzEri",
+            "28wW79es5Kp48PWLrT0ZVt",
+            5,
+            "75ulUdT5NB+YD1L21/U4TS",
+            3,
+            "bbz7d8/51IB7/49Y9Gwe09",
+            "bc4XlDml9C/7dD/RqCr4xi",
+            "e3LACKfpRPab/rOltw4+rX",
+            10
+        ],
+        "0af3001": [
+            "00HJO8/5lBRLVhbXVR4PHb",
+            "0bJOkWU49DAKyfr64cg+xb",
+            "18esgdMQ5EJrA/HIB0cJti",
+            "28OcyCfERCMq9dwKYbjODS",
+            "2f+Dl9e7dJJpVBQ75vYgzL",
+            "32+9p4vORD04RIl8bwMNjN",
+            "38nwza/YhByKXlnrelmRVl",
+            "3fHtrFlZhIJq2XQQJJloMr",
+            "3fdHQAoY5LtY4O4vJh7Mca",
+            14,
+            "44KBcmOydMqJazXaBbOmq2",
+            "48Bb5GpQFCNL6QEQe3DCrc",
+            "4d5qLsurpKjoT/4enfeWrG",
+            "52qeLrm0JFSLk3VUbnxOHT",
+            6,
+            "5bH6OYwfRHF5sfqO3YwSmH",
+            "60E+eKamFLkIAE2GCa6pnk",
+            "75ZMQnqylPBrso5YgmWTeH",
+            "866qypA2NCkJfq5oYf3bJP",
+            "95h/YB4jdAnqfuQsKs9GzH",
+            16,
+            "9bqgKW9FJN/4ussOTRnNeQ",
+            "9fcQECKyFDV4jusBNTRD1g",
+            3,
+            "a5YKrB8oRBsbGfg4BpEef/",
+            "ab4fUcVhNMLqyEsXCuJu6Y",
+            7,
+            "b3HwAKiA9MQIeGxivBbmwo",
+            "b5n44vxttOTrk34pJNDoTm",
+            "b8h33B3BdMWJEITms4o66p",
+            8,
+            "c4sUvStnxK25NAiWAvPAFz",
+            "cbU+VyJDpMzazaCmMHt8WU",
+            "cbsB5jOHBAW4m7eiLuSBri",
+            "d5FXaz2aVL04GOPgx3qSES",
+            12,
+            9,
+            "e05LH/G5tOubeBxOsZwMCJ",
+            "edn5a+f0VJDIo91UCZhD51",
+            "f1QDsGBMVJe475TfklSzy3",
+            10,
+            "f7A4jbUgpKybm0U3kNwxZM",
+            "fbUT9IH4hAGrLv0pumRVYF"
+        ],
+        "0c443d333": [
+            "00iHUeKoFB15fpe0+zAXhn",
+            "08om/j5+JFEa29kwkN/7Yx",
+            "17pp5usCFPkrKFYtt5HxC1",
+            "1f3RJBtZBEeLP92D0rxrHU",
+            "32ZtzIH35IM5Ed0bgs+jlk",
+            "39xY0y9MdKqpwTnTN5Kvib",
+            "41Oa72HNZMM77nv1HyAhee",
+            "4fyldaK11AqbsRo+qNNg3w",
+            "54OJQ7WJFLiZLRRU3kNSV4",
+            "64qrUCXMNOsa79wTNkIpGN",
+            "68zJRaeupMno6GWvACFGup",
+            "80lRUdqmRMibKgGGCcdTfK",
+            "85zV0Bzv1IgKJeEtNJEdD0",
+            "94k0voDhlFo6BeBSx16Iil",
+            3,
+            "b525kBFdlCeY7pwRdczS6z",
+            11,
+            "b94OZLjshATrIA18epbD/t",
+            "bb/uIbJeFK75qZmBbBo8lt",
+            "c1tqlCzxBCCZPFZekxR3PK",
+            "c5iWIzyMZOJolIlP/4kL8K",
+            12,
+            "d6yoA+ao1FlKYYYu+jxQxy",
+            "e9zBIRYF1P7aDbe3XpFqgJ",
+            "ectyjTv+VElaitvdpl4Vev",
+            10,
+            "f6IF9+EWRPe7ryVqt1flns"
+        ],
+        "0f9a8719d": [
+            13,
+            "07HcgQuOxDw6hwAYYesw91",
+            "1aNKBnQQJDHZmh+t1MTiwf",
+            "1eYtB5PA5P9I58DDQmyIYA",
+            "20+r0v7ERKgoozLuTEjVHe",
+            "28ZDnZCqhD+oF3bEQDyrFl",
+            "29FYIk+N1GYaeWH/q1NxQO",
+            "2aCIUl3elJNZC7vvyR56S3",
+            "30DkHGjORI4KMwogLVRK21",
+            14,
+            15,
+            "4dCLy0m4pF2JCWD8MNk1l6",
+            "4fJdHhQ6tJ4Z16QPgUhkjK",
+            6,
+            "63yLpmqINLs436ma0MSi0e",
+            "74fiOyFapMYK41NjKJuikS",
+            "79v9Y+nE1PBITLM7LQCBWO",
+            "7fjffVofFOP7nkPSVr6MI5",
+            "84iygqLltBfJXeaG0PS6MG",
+            "8a0xIVTihJla+NxioKNU1m",
+            16,
+            "a0pi547QtGh4c5CdUp1T3t",
+            "a1K2nl8oxCHYHHn8MZbUYy",
+            "a1QNu/7QxLvp7lBr2AWeZm",
+            3,
+            "a3EXZk54lIvYu9JEbovkgW",
+            "a7njxBMV9AZILQyPyUwqg1",
+            7,
+            "bcMAhCwMRIqq52dHhgN4qO",
+            9,
+            "dbQ8CtlqNPN6EjGn/v4XyR",
+            17,
+            "e1GippG8pHvapJk3V+Zrn8",
+            "e2xgELmqJBmKMGLsmseiJ1",
+            "e97GVMl6JHh5Ml5qEDdSGa",
+            "f0BIwQ8D5Ml7nTNQbh1YlS",
+            "fdDC2Nx4VAB5PPcUzw0o9+",
+            "fdILz1tDVJ+o0wuiLbDrn6"
+        ]
+    },
+    orientation: "",
+    uuids: [
+        "a0p9C49GBPXYQ6Wnp1TAtU",
+        "8cVOWgO95JgaIYS/od47U6",
+        "2aDnD/GTNEIbuVo4O02OXU",
+        "a2MjXRFdtLlYQ5ouAFv/+R",
+        "b5E0WwtglArbEPiQys8zJ6",
+        "68dxHElnlOAJdaoSn4nj8e",
+        "57xhY8RhRAFYanF9D+xV5P",
+        "aeDeCd9MFMOqXawRW56ZR2",
+        "c0gSKjHmlECYfCQKvmaXMy",
+        "d7SpQIlilO+50/D2plJj/O",
+        "f3BwOIxwJOq7VDYUu362E2",
+        "b6jDPQrb5LnYdLxGnP7LW1",
+        "d5xWYU1sRLxpQS4LcE853p",
+        "05Lp9zeeNEPrs8mk80/zEV",
+        "40nUDIpqBAZIjtyGhsnp8X",
+        "44K5KsumREraLU+lrfUfR6",
+        "96IFw8cz1IFLYTGvR7CGEy",
+        "demk0AEwhONLUOUPyISXQt"
+    ],
+    "md5AssetsMap": {
+        "01/0135684e3.json": "57cc9",
+        "04/043307de.json": "95510",
+        "07/07c99df0.json": "fafda",
+        "0a/0ad6357a3.json": "73f3a",
+        "0a/0af3001.json": "3c913",
+        "0c/0c443d333.json": "04ba5",
+        "0f/0f9a8719d.json": "00876",
+        "assets/res/textures/Down/bg_pic.png": "5fab0",
+        "assets/res/textures/Down/btn_bai.png": "c5c22",
+        "assets/res/textures/Down/btn_huang.png": "eea6d",
+        "assets/res/textures/Down/lose.png": "40d5b",
+        "assets/res/textures/Down/win.png": "841df",
+        "assets/res/textures/Game/count_down.png": "5c213",
+        "assets/res/textures/Game/error_option.png": "fa917",
+        "assets/res/textures/Game/f_icon.png": "07232",
+        "assets/res/textures/Game/normal_option.png": "28198",
+        "assets/res/textures/Game/points.png": "c7660",
+        "assets/res/textures/Game/prg_bar_bar.png": "7b3b4",
+        "assets/res/textures/Game/prg_bar_bg.png": "21a7e",
+        "assets/res/textures/Game/rotate_bg.png": "eaae7",
+        "assets/res/textures/Game/t_icon.png": "e33ec",
+        "assets/res/textures/Game/time_bar_bar.png": "b37b2",
+        "assets/res/textures/Game/time_bar_bg.png": "a9445",
+        "assets/res/textures/Game/top_text_bg.png": "c8937",
+        "assets/res/textures/Game/tree_icon1.png": "0af91",
+        "assets/res/textures/Game/tree_icon2.png": "69cce",
+        "assets/res/textures/Game/tree_icon3.png": "5c673",
+        "assets/res/textures/Game/true_option.png": "3eef8",
+        "assets/res/textures/global/alert_layer.png": "498f6",
+        "assets/res/textures/global/ani/load_ani (1).png": "f1b5a",
+        "assets/res/textures/global/ani/load_ani (10).png": "46ae4",
+        "assets/res/textures/global/ani/load_ani (11).png": "87927",
+        "assets/res/textures/global/ani/load_ani (12).png": "091c8",
+        "assets/res/textures/global/ani/load_ani (13).png": "13321",
+        "assets/res/textures/global/ani/load_ani (14).png": "c2399",
+        "assets/res/textures/global/ani/load_ani (15).png": "c2a91",
+        "assets/res/textures/global/ani/load_ani (16).png": "07f70",
+        "assets/res/textures/global/ani/load_ani (17).png": "c4529",
+        "assets/res/textures/global/ani/load_ani (2).png": "313a8",
+        "assets/res/textures/global/ani/load_ani (3).png": "9efb2",
+        "assets/res/textures/global/ani/load_ani (4).png": "8b142",
+        "assets/res/textures/global/ani/load_ani (5).png": "654aa",
+        "assets/res/textures/global/ani/load_ani (6).png": "11d26",
+        "assets/res/textures/global/ani/load_ani (7).png": "05d67",
+        "assets/res/textures/global/ani/load_ani (8).png": "357c8",
+        "assets/res/textures/global/back_icon.png": "38af8",
+        "assets/res/textures/global/game_bg.jpg": "836ff",
+        "assets/res/textures/global/logo.png": "b080a",
+        "assets/res/textures/Home/back_black_icon.png": "f9dee",
+        "assets/res/textures/Home/bank_type_logo_1.png": "a51d7",
+        "assets/res/textures/Home/bank_type_logo_10.png": "5be2b",
+        "assets/res/textures/Home/bank_type_logo_11.png": "28044",
+        "assets/res/textures/Home/bank_type_logo_12.png": "db980",
+        "assets/res/textures/Home/bank_type_logo_13.png": "d8621",
+        "assets/res/textures/Home/bank_type_logo_14.png": "f408c",
+        "assets/res/textures/Home/bank_type_logo_15.png": "7f6a6",
+        "assets/res/textures/Home/bank_type_logo_2.png": "1827d",
+        "assets/res/textures/Home/bank_type_logo_3.png": "38df8",
+        "assets/res/textures/Home/bank_type_logo_4.png": "1a80a",
+        "assets/res/textures/Home/bank_type_logo_5.png": "d511e",
+        "assets/res/textures/Home/bank_type_logo_6.png": "d29d8",
+        "assets/res/textures/Home/bank_type_logo_7.png": "53c61",
+        "assets/res/textures/Home/bank_type_logo_8.png": "5bbab",
+        "assets/res/textures/Home/bank_type_logo_9.png": "bad02",
+        "assets/res/textures/Home/big_close_icon.png": "9dbbf",
+        "assets/res/textures/Home/bind_btn.png": "94c7f",
+        "assets/res/textures/Home/btn_bg.png": "22a7d",
+        "assets/res/textures/Home/cash_bg.png": "f6a1e",
+        "assets/res/textures/Home/cash_btn.png": "a1ce6",
+        "assets/res/textures/Home/chance_icon.png": "7cf34",
+        "assets/res/textures/Home/chance_text.png": "5420b",
+        "assets/res/textures/Home/dash_icon.png": "8aa26",
+        "assets/res/textures/Home/get_more.png": "0aec9",
+        "assets/res/textures/Home/goto_btn.png": "33f82",
+        "assets/res/textures/Home/heart_icon.png": "3c9ba",
+        "assets/res/textures/Home/input_bg_l.png": "71585",
+        "assets/res/textures/Home/input_bg_r.png": "da7b6",
+        "assets/res/textures/Home/input_bg.png": "736f1",
+        "assets/res/textures/Home/label_font.png": "4ca33",
+        "assets/res/textures/Home/light.png": "ebd71",
+        "assets/res/textures/Home/line_bg.png": "7b3b6",
+        "assets/res/textures/Home/login_act_bg.png": "db957",
+        "assets/res/textures/Home/login_back.png": "87d33",
+        "assets/res/textures/Home/login_btn_bg.png": "5c9b7",
+        "assets/res/textures/Home/login_pwd_bg.png": "139c4",
+        "assets/res/textures/Home/logined.png": "e7376",
+        "assets/res/textures/Home/money_icon.png": "571b0",
+        "assets/res/textures/Home/ques_card.png": "3ead2",
+        "assets/res/textures/Home/radiu_w_bg.png": "8a9ce",
+        "assets/res/textures/Home/rw_ys_font.png": "f5ab9",
+        "assets/res/textures/Home/sel_bank_icon.png": "09a7c",
+        "assets/res/textures/Home/share_tips.png": "c145f",
+        "assets/res/textures/Home/slogen.png": "a23dc",
+        "assets/res/textures/Home/sloid_icon.png": "67b44",
+        "assets/res/textures/Home/star_bg.png": "54989",
+        "assets/res/textures/Home/tri_icon1.png": "220be",
+        "assets/res/textures/Home/tri_icon2.png": "d2e9d",
+        "assets/res/textures/Home/tri_icon3.png": "59dfe",
+        "assets/res/textures/Home/wenlu.png": "a1ded",
+        "assets/res/textures/Home/yq_haoyou.png": "ed833",
+        "assets/res/textures/Home/zs_icon_1.png": "7dfe3",
+        "assets/res/textures/Home/zs_icon_2.png": "b473e",
+        "assets/res/textures/Home/zs_icon_3.png": "6e920",
+        "assets/res/textures/Home/zs_icon_4.png": "dbbb6",
+        "internal/image/default_btn_disabled.png": "286c6",
+        "internal/image/default_btn_normal.png": "1ecb7",
+        "internal/image/default_btn_pressed.png": "bedf4",
+        "internal/image/default_sprite_splash.png": "cea68"
+    }
+};

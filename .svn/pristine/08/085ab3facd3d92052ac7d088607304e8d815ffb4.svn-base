@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "61851037-16e3-4649-bbb1-118a2a7ef77f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "bank_type_logo_8": {
+      "ver": "1.0.3",
+      "uuid": "9587f601-e237-409e-a7ee-42c2acf46cc7",
+      "rawTextureUuid": "61851037-16e3-4649-bbb1-118a2a7ef77f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -3,
+      "offsetY": -0.5,
+      "trimX": 0,
+      "trimY": 15,
+      "width": 204,
+      "height": 31,
+      "rawWidth": 210,
+      "rawHeight": 60,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

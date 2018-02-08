@@ -9,7 +9,7 @@ cc.Class({
     //添加常驻节点用户不同场景传参
     cc.game.addPersistRootNode(this.persistNode);
     this.setSid();
-    this.isAuth();
+    this.resolveFromZjiayuan();
     //无限机会
     //cc.sys.localStorage.removeItem('token');
   },
@@ -22,10 +22,33 @@ cc.Class({
       }
     }
   },
+  //从z家园游戏中跳转过来处理
+  resolveFromZjiayuan(){
+    if(!cc.sys.isNative){
+      let isFromGame = Util.getQueryString('isFromGame');
+      let token = (decodeURI(Util.getQueryString('token'))).split(' ')[1];
+      if(isFromGame&&token&&Global.isFirstFromGame){//游戏中跳转过来
+        Global.isFirstFromGame = false;
+        Global.isFirstCom = false;
+        HomeUtil.getQaToken({token:token}).then((res)=>{
+          if(!res.success){
+            Util.showTips(res.msg);
+          }else{
+            let token = res.obj.tokenType+' '+res.obj.accessToken;
+            cc.sys.localStorage.setItem('token',token);
+            this.toGamePage();
+          }
+        })
+      }else{
+        this.isAuth();
+      }
+    }
+  },
   //检测是否为登陆状态 如果是则直接进入主页
   isAuth(){
     if(cc.sys.localStorage.getItem('token')&&Global.isFirstCom){
       Global.isFirstCom = false;
+      Global.isFirstFromGame = false;
       Util.showLoading();
       cc.director.loadScene('Home',()=>{
 
@@ -53,7 +76,7 @@ cc.Class({
       HomeUtil.getIndexData().then((res)=>{
         if(res.success){
           Util.getPerNode('PerNode').getComponent('PerNode').datas.userInfo = res.obj;
-          if(res.obj.qaCnt>=1){
+          if(res.obj.singleCnt>=1){
             Util.showLoading();
             cc.director.loadScene('Game',()=>{
 
@@ -79,7 +102,7 @@ cc.Class({
           HomeUtil.getIndexData().then((rest)=>{
             if(rest.success){
               Util.getPerNode('PerNode').getComponent('PerNode').datas.userInfo = rest.obj;
-              if(rest.obj.qaCnt>=1){
+              if(rest.obj.singleCnt>=1){
                 Util.showLoading();
                 cc.director.loadScene('Game',()=>{
 

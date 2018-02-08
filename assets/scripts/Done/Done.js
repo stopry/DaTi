@@ -43,7 +43,7 @@ cc.Class({
         Util.showTips(res.msg);
       }else{
         let obj = res.obj;
-        let chance = obj.qaCnt;
+        let chance = obj.singleCnt;
         if(chance<=0){
           Util.showTips('您的答题次数已用完');
           return;

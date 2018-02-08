@@ -29,7 +29,7 @@ cc.Class({
       if(!res.success){
         Util.showTips(res.msg);
       }else{
-        let nums = res.obj.qaCnt;
+        let nums = res.obj.singleCnt;
         this.chanceCardNum.string = 'x '+nums;
       }
     });

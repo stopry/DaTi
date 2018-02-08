@@ -2,6 +2,18 @@ let Util = require('Util');
 let Net = require('Net');
 const HomeUtil = (function(){
   var hu = {};
+  //通过市场或游戏的token获取Qa的token
+  let getQaTokenUrl = '/login/getQaToken';
+  hu.getQaToken = function(token){
+    let prs = new Promise((resolve,reject)=>{
+      Net.get(getQaTokenUrl,!1,token,(res)=>{
+        resolve(res);
+      },(err)=>{
+        reject(false);
+      })
+    });
+    return prs;
+  };
   //游客登录
   let visitorLoginUrl = '/login/visitorlogin';
   hu.visitorToken = function(datas){

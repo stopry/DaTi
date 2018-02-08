@@ -3,8 +3,8 @@
 let Net = {
     api:{
         is89:!1,//是否是89服务
-        //host:'http://192.168.19.89:8085',//host //答题接口
-        host:'',//host //答题接口
+        host:'http://192.168.19.89:8085',//host //答题接口
+        //host:'',//host //答题接口
         api:'/qa',
         //marketHost:'http://192.168.19.89:8080',
         marketHost:'',

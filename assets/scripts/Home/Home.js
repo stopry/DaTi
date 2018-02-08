@@ -68,8 +68,8 @@ cc.Class({
         this.isNewTask = obj.finishNewbieTask!="0";
         this.isCerfa = obj.certification!="0";
 
-        this.chanceNum.string = obj.qaCnt;
-        this.smallChanceNum.string = obj.qaCnt;
+        this.chanceNum.string = obj.singleCnt;
+        this.smallChanceNum.string = obj.singleCnt;
         this.accountMoney.string = obj.gold;
         this.userName.string = obj.userName;
         Util.getPerNode('PerNode').getComponent('PerNode').datas.userInfo = obj;

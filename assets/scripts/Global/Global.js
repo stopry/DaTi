@@ -6,6 +6,7 @@ window.Global={
     isVistor:!1,//是否为游客
   },
   isFirstCom:true,
+  isFirstFromGame:true,
   //微信分享数据
   wxShare:{
     title: 'Z家园答题赢金币',

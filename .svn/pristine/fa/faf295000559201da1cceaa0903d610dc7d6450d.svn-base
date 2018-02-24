@@ -42,17 +42,13 @@ cc.Class({
     }
   },
   showTips(){
-    Util.showTips('暂未开放,敬请期待!');
+    Util.showTips('暂未开放');
   },
   //去答题页
   toGamePage(){
     Util.showLoading();
     if(parseInt(this.chanceNum.string)<=0){
-      Util.showConDia('您的答题次数已用完,请点击屏幕上的我的推广码截屏发送给好友,或者点击屏幕上的获取更多和邀请好友按钮.',()=>{
-        // cc.director.loadScene('Invite');
-      },()=>{});
-
-      //Util.showTips('您的答题次数已用完,请点击下方的获取更多获取答题机会');
+      Util.showTips('您的答题次数已用完,请点击下方的获取更多获取答题机会');
       Util.hideLoading();
       return;
     }
@@ -236,9 +232,7 @@ cc.Class({
   showBigPrtCode(){
     //如果用户没有绑定
     if(!this.isBind){
-      Util.showConDia('绑定身份后才有推广码,点击确定去绑定身份.',()=>{
-        this.openBindPage();
-      },()=>{});
+      Util.showTips('绑定身份后才有推广码');
       return;
     }
     this.createBigQCode();

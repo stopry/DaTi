@@ -45,9 +45,6 @@ cc.Class({
         let obj = res.obj;
         let chance = obj.singleCnt;
         if(chance<=0){
-          Util.showConDia('您的答题次数已用完,点击确定去获取更多答题机会.',()=>{
-            cc.director.loadScene('Invite');
-          },()=>{});
           Util.showTips('您的答题次数已用完');
           return;
         }
@@ -70,14 +67,14 @@ cc.Class({
         let bindBank = obj.bindBank!="0";
         let isNewTask = obj.finishNewbieTask!="0";
         if(!bindBank||!isNewTask){
-          Util.showConDia('您尚有未完成的任务,请点击确定去完成剩余任务.',()=>{
+          Util.showConDia('您尚未完成任务,请返回首页点击余额区域查看',()=>{
             Global.isFormCash = true;
             cc.director.loadScene('Home');
           },()=>{});
           //Util.showTips('您尚未完成任务,请返回首页点击余额区域查看');
           return;
         }
-        //去Cash界面
+        //去game界面
         cc.director.loadScene('Cash',()=>{
 
         });

@@ -80,7 +80,7 @@ cc.Class({
 
         this.chanceNum.string = obj.singleCnt+obj.singleFreeCnt;
         this.smallChanceNum.string = obj.singleCnt+obj.singleFreeCnt;
-        this.accountMoney.string = obj.money+"元";
+        this.accountMoney.string = obj.gold;
         this.userName.string = obj.userName;
         Util.getPerNode('PerNode').getComponent('PerNode').datas.userInfo = obj;
 

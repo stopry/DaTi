@@ -13,7 +13,6 @@ cc.Class({
     this.initPage();
   },
   start(){
-    registShare();
     //this.copyPrtCode();
   },
   //邀请好友-提示点击右上角
@@ -44,7 +43,7 @@ cc.Class({
       if(!res.success){
         Util.showTips(res.msg);
       }else{
-        let nums = res.obj.singleCnt+res.obj.singleFreeCnt;
+        let nums = res.obj.singleCnt;
         this.chanceCardNum.string = 'x '+nums;
       }
     });

@@ -36,10 +36,7 @@ cc.Class({
           }else{
             let token = res.obj.tokenType+' '+res.obj.accessToken;
             cc.sys.localStorage.setItem('token',token);
-            // this.toGamePage();
-            cc.director.loadScene('Home',()=>{
-
-            });
+            this.toGamePage();
           }
         })
       }else{

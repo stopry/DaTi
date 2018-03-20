@@ -13,9 +13,9 @@ cc.Class({
     //无限机会
     //cc.sys.localStorage.removeItem('token');
 
-    // cc.director.loadScene('Home',()=>{
-    //   //
-    //      });
+    cc.director.loadScene('Home',()=>{
+      //
+         });
   },
   //存sid
   setSid(){

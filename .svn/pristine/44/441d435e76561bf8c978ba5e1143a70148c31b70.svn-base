@@ -32,18 +32,17 @@ cc.Class({
     //   return;
     // }
     //调用接口获取市场token
-    // HomeUtil.getMarketToken().then((res)=>{
-    //   if(!res.success){
-    //     Util.showTips(res.msg);
-    //   }else{
-    //     let token = res.obj.tokenType+' '+res.obj.accessToken;
-    //     token = encodeURI(token);
-    //     //带参数跳转到市场提现页面
-    //     // cc.sys.openURL('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);//浏览器会拦截弹框
-    //     window.location.href=('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);
-    //   }
-    // });
-    this.cashNum.string = cahsNum;
+    HomeUtil.getMarketToken().then((res)=>{
+      if(!res.success){
+        Util.showTips(res.msg);
+      }else{
+        let token = res.obj.tokenType+' '+res.obj.accessToken;
+        token = encodeURI(token);
+        //带参数跳转到市场提现页面
+        // cc.sys.openURL('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);//浏览器会拦截弹框
+        window.location.href=('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);
+      }
+    });
   },
   //返回主页
   backHome(){

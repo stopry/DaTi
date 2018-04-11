@@ -53,7 +53,7 @@ cc.Class({
   },
   //去提现
   toCash(){
-    let cahsNum = Util.trim(this.cashNum.string);
+    let cahsNum = Util.trim(this.cashNum.string+'');
     this.cashDatas.amt = cahsNum;
     if(!cahsNum){
       Util.showTips('请输入提现数额');
@@ -77,7 +77,7 @@ cc.Class({
         token = encodeURI(token);
         //带参数跳转到市场提现页面
         // cc.sys.openURL('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);//浏览器会拦截弹框
-        window.location.href=('http://www.senchen.vip/html/gold-cash.html?link=gold-cash&token='+token+"&gold="+cahsNum);
+        window.location.href=('http://www.senchen.vip/html/skip-page.html?link=gold-cash&token='+token+"&gold="+cahsNum);
       }
     });
   },

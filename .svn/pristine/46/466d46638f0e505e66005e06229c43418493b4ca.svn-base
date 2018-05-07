@@ -75,11 +75,11 @@ cc.Class({
   toGamePage(){
     Util.showLoading();
     if(parseInt(this.chanceNum.string)<=0){
-      Util.showConDia('您的答题次数已用完',()=>{
+      Util.showConDia('您的答题次数已用完,请点击屏幕上的获"取更多次数"按钮获得更多答题机会.',()=>{
         // cc.director.loadScene('Invite');
       },()=>{});
 
-      //Util.showTips('您的已用完,请点击下方的获取更多获取答题机会');
+      //Util.showTips('您的答题次数已用完,请点击下方的获取更多获取答题机会');
       Util.hideLoading();
       return;
     }
@@ -220,7 +220,7 @@ cc.Class({
     //检测任务是否完成-没有完成
     if(!this.isBind||!this.isNewTask){
       if(!this.isBind){
-        this.taskBind.string = '绑定账号(0/1)';
+        this.taskBind.string = '绑定银行卡完善个人信息(0/1)';
         this.taskBindNode.setColor(cc.color(153, 154, 156, 255));
       }
       if(!this.isNewTask){
@@ -228,7 +228,7 @@ cc.Class({
         this.taskNewNode.setColor(cc.color(153, 154, 156, 255));
       }
       if(this.isBind){
-        this.taskBind.string = '绑定账号(1/1)';
+        this.taskBind.string = '绑定银行卡完善个人信息(1/1)';
         this.taskBindNode.setColor(cc.color(46, 65, 132, 255));
       }
       if(this.isNewTask){
@@ -310,23 +310,14 @@ cc.Class({
     HomeUtil.getMarketToken().then((res)=>{
       if(!res.success){
         if(alw){
-          if(!cc.sys.isNative){
-            window.location.href= 'http://game.zjiayuan.com';
-          }else{
-            cc.sys.openURL('http://game.zjiayuan.com');
-          }
+          cc.sys.openURL('http://game.zjiayuan.com');
         }
         Util.showTips(res.msg);
       }else{
         let token = res.obj.tokenType+' '+res.obj.accessToken;
         token = encodeURI(token);
         //带参数跳转到游戏
-        if(!cc.sys.isNative){
-          window.location.href = 'http://game.zjiayuan.com?fromDati=1&token='+token;
-        }else{
-          cc.sys.openURL('http://game.zjiayuan.com?fromDati=1&token='+token);
-        }
-
+        cc.sys.openURL('http://game.zjiayuan.com?fromDati=1&token='+token);
       }
     });
   },
@@ -395,30 +386,18 @@ cc.Class({
   toZJiaYuanGameAll(){
     //游客身份直接去游戏
     if(Global.user.isVistor){
-      if(!cc.sys.isNative){
-        window.location.href = 'http://game.zjiayuan.com'
-      }else{
-        cc.sys.openURL('http://game.zjiayuan.com');
-      }
+      cc.sys.openURL('http://game.zjiayuan.com');
       return;
     }
     HomeUtil.getMarketToken().then((res)=>{
       if(!res.success){
-        if(!cc.sys.isNative){
-          window.location.href = 'http://game.zjiayuan.com'
-        }else{
-          cc.sys.openURL('http://game.zjiayuan.com');
-        }
+        cc.sys.openURL('http://game.zjiayuan.com');
         //Util.showTips(res.msg);
       }else{
         let token = res.obj.tokenType+' '+res.obj.accessToken;
         token = encodeURI(token);
         //带参数跳转到游戏
-        if(!cc.sys.isNative){
-          window.location.href = 'http://game.zjiayuan.com?fromDati=1&token='+token
-        }else{
-          cc.sys.openURL('http://game.zjiayuan.com?fromDati=1&token='+token);
-        }
+        cc.sys.openURL('http://game.zjiayuan.com?fromDati=1&token='+token);
       }
     });
   },

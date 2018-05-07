@@ -48,7 +48,7 @@ cc.Class({
         let obj = res.obj;
         let chance = obj.singleCnt+obj.singleFreeCnt;
         if(chance<=0){
-          Util.showConDia('您的答题次数已用完.',()=>{
+          Util.showConDia('您的答题次数已用完,点击确定去获取更多答题机会.',()=>{
             cc.director.loadScene('Invite');
           },()=>{});
           Util.showTips('您的答题次数已用完');

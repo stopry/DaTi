@@ -220,7 +220,7 @@ cc.Class({
     //检测任务是否完成-没有完成
     if(!this.isBind||!this.isNewTask){
       if(!this.isBind){
-        this.taskBind.string = '绑定账号(0/1)';
+        this.taskBind.string = '绑定银行卡完善个人信息(0/1)';
         this.taskBindNode.setColor(cc.color(153, 154, 156, 255));
       }
       if(!this.isNewTask){
@@ -228,7 +228,7 @@ cc.Class({
         this.taskNewNode.setColor(cc.color(153, 154, 156, 255));
       }
       if(this.isBind){
-        this.taskBind.string = '绑定账号(1/1)';
+        this.taskBind.string = '绑定银行卡完善个人信息(1/1)';
         this.taskBindNode.setColor(cc.color(46, 65, 132, 255));
       }
       if(this.isNewTask){

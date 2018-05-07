@@ -48,7 +48,7 @@ cc.Class({
         let obj = res.obj;
         let chance = obj.singleCnt+obj.singleFreeCnt;
         if(chance<=0){
-          Util.showConDia('您的答题次数已用完.',()=>{
+          Util.showConDia('您的答题次数已用完,点击确定去获取更多答题机会.',()=>{
             cc.director.loadScene('Invite');
           },()=>{});
           Util.showTips('您的答题次数已用完');
@@ -83,32 +83,19 @@ cc.Class({
   //去z家园游戏
   toZJiaYuanGame(){
     //游客身份直接去游戏
-    //游客身份直接去游戏
     if(Global.user.isVistor){
-      if(!cc.sys.isNative){
-        window.location.href = 'http://game.zjiayuan.com'
-      }else{
-        cc.sys.openURL('http://game.zjiayuan.com');
-      }
+      cc.sys.openURL('http://game.zjiayuan.com');
       return;
     }
     HomeUtil.getMarketToken().then((res)=>{
       if(!res.success){
-        if(!cc.sys.isNative){
-          window.location.href = 'http://game.zjiayuan.com'
-        }else{
-          cc.sys.openURL('http://game.zjiayuan.com');
-        }
+        cc.sys.openURL('http://game.zjiayuan.com');
         //Util.showTips(res.msg);
       }else{
         let token = res.obj.tokenType+' '+res.obj.accessToken;
         token = encodeURI(token);
         //带参数跳转到游戏
-        if(!cc.sys.isNative){
-          window.location.href = 'http://game.zjiayuan.com?fromDati=1&token='+token
-        }else{
-          cc.sys.openURL('http://game.zjiayuan.com?fromDati=1&token='+token);
-        }
+        cc.sys.openURL('http://game.zjiayuan.com?fromDati=1&token='+token);
       }
     });
   },

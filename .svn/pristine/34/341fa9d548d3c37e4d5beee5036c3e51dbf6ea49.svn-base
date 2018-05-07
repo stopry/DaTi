@@ -75,11 +75,11 @@ cc.Class({
   toGamePage(){
     Util.showLoading();
     if(parseInt(this.chanceNum.string)<=0){
-      Util.showConDia('您的答题次数已用完',()=>{
+      Util.showConDia('您的答题次数已用完,请点击屏幕上的获"取更多次数"按钮获得更多答题机会.',()=>{
         // cc.director.loadScene('Invite');
       },()=>{});
 
-      //Util.showTips('您的已用完,请点击下方的获取更多获取答题机会');
+      //Util.showTips('您的答题次数已用完,请点击下方的获取更多获取答题机会');
       Util.hideLoading();
       return;
     }
@@ -220,7 +220,7 @@ cc.Class({
     //检测任务是否完成-没有完成
     if(!this.isBind||!this.isNewTask){
       if(!this.isBind){
-        this.taskBind.string = '绑定账号(0/1)';
+        this.taskBind.string = '绑定银行卡完善个人信息(0/1)';
         this.taskBindNode.setColor(cc.color(153, 154, 156, 255));
       }
       if(!this.isNewTask){
@@ -228,7 +228,7 @@ cc.Class({
         this.taskNewNode.setColor(cc.color(153, 154, 156, 255));
       }
       if(this.isBind){
-        this.taskBind.string = '绑定账号(1/1)';
+        this.taskBind.string = '绑定银行卡完善个人信息(1/1)';
         this.taskBindNode.setColor(cc.color(46, 65, 132, 255));
       }
       if(this.isNewTask){
